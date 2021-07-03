@@ -1,6 +1,10 @@
 use actix_web::http::Method;
 use actix_web::App;
 
+#[macro_use]
+extern crate diesel;
+mod schema;
+
 mod handler;
 
 const PORT: u16 = 3000;

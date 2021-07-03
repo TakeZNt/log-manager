@@ -484,12 +484,44 @@ dependencies = [
 ]
 
 [[package]]
+name = "diesel"
+version = "1.4.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bba51ca66f57261fd17cadf8b73e4775cc307d0521d855de3f5de91a8f074e0e"
+dependencies = [
+ "byteorder",
+ "diesel_derives",
+]
+
+[[package]]
+name = "diesel_derives"
+version = "1.4.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "45f5098f628d02a7a0f68ddba586fb61e80edec3bdc1be3b921f4ceec60858d3"
+dependencies = [
+ "proc-macro2 1.0.26",
+ "quote 1.0.9",
+ "syn 1.0.72",
+]
+
+[[package]]
 name = "digest"
 version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d3dd60d1080a57a05ab032377049e0591415d2b31afd7028356dbf3cc6dcb066"
 dependencies = [
  "generic-array",
+]
+
+[[package]]
+name = "dotenv"
+version = "0.13.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c0d0a1279c96732bc6800ce6337b6a614697b0e74ae058dc03c62ebeb78b4d86"
+dependencies = [
+ "failure",
+ "lazy_static",
+ "regex",
 ]
 
 [[package]]
@@ -1513,6 +1545,9 @@ version = "0.1.0"
 dependencies = [
  "actix-web",
  "api",
+ "chrono",
+ "diesel",
+ "dotenv",
  "env_logger",
  "failure",
  "log",
